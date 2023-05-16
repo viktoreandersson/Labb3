@@ -22,9 +22,8 @@ int main()
             ser_port.write(switch_ord);
             ThisThread::sleep_for(50ms);   
 
-
-            switch_ord=pot.read(); // För att läsa en potetiometer skicka istället
-
+            potRead=(pot.read())*100; // För att läsa en potetiometer skicka istället
+            switch_ord=int(potRead);
 
     }
 }
